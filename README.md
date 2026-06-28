@@ -116,6 +116,19 @@ orquestacion-enjambres-ia/
 ```
 
 ---
+
+## Repos relacionados
+
+Este repositorio forma parte de un ecosistema de piezas para construir y gobernar sistemas
+de IA con criterio. Los más cercanos a este:
+
+- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — la misma filosofía aplicada a los datos: código que recomprueba la coherencia sin IA.
+- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — el método para gobernar skills: golden sets, puertas de no-regresión y verificador.
+- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance) — que la memoria de un agente no se convierta en un vertedero.
+- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable) — evaluar una skill como se examina a un alumno (de 66% a 100%, medido).
+- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm) — un enjambre de agentes real, con su proceso y sus caídas explicadas.
+
+---
 ---
 
 ## Multi-agent AI orchestration
@@ -200,6 +213,17 @@ in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)
 - **About the demonstration agents:** each agent declares in its header the support docs it would load
   (`catalogo_productos.md`, `politica_devoluciones.md`…). These are illustrative references,
   not shipped as files: what this repo teaches is routing, not each agent's internal logic.
+
+### Related repositories
+
+This repository is part of an ecosystem of building blocks for building and governing AI
+systems with rigour. The closest ones:
+
+- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — the same philosophy applied to data: code that re-checks coherence without AI.
+- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — the method for governing skills: golden sets, no-regression gates, verifier.
+- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance) — keeping an agent's memory from turning into a dumping ground.
+- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable) — evaluating a skill the way you'd examine a student (66% to 100%, measured).
+- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm) — a real agent swarm, with its process and its failures explained.
 
 ---
 
