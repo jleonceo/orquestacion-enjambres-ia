@@ -24,7 +24,7 @@ Este repositorio enseña una forma de resolver las dos cosas:
 2. Una **evaluación a ciegas** que comprueba que cada petición llega al agente correcto,
    con casos diseñados para cazar los errores de verdad.
 
-Todo con un ejemplo de juguete que cualquiera entiende: una tienda online con ocho agentes.
+Todo con un ejemplo de demostración que cualquiera entiende: una tienda online con ocho agentes.
 
 ---
 
@@ -49,9 +49,9 @@ confundir. Por ejemplo:
   agente**: es el freno de seguridad. Un sistema así tiene que saber cuándo NO actuar.
 
 Resultado: **15 de 15 aciertos**. El detalle, caso a caso, está en
-[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). No es un número inventado: se
-obtiene ejecutando el enrutador y comparando con las respuestas correctas, y se puede
-reproducir.
+[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). La cifra no es una estimación:
+se obtiene ejecutando el enrutador y comparándola con las respuestas correctas, y es
+reproducible.
 
 ---
 
@@ -80,7 +80,7 @@ entre agentes parecidos), de seguridad/trampa, y de secuencia (varias en una). P
 evaluar, se le pasan las peticiones a un agente enrutador que **no ve las respuestas**
 (por eso es "a ciegas") y se compara después. El criterio distingue cuatro veredictos:
 acierta, acierta a medias, falla, o **hallazgo** (cuando el fallo está en cómo escribiste
-el examen, no en el sistema (ver [`caso_real.md`](caso_real.md)).
+el examen, no en el sistema; ver [`caso_real.md`](caso_real.md)).
 
 ---
 
@@ -89,12 +89,12 @@ el examen, no en el sistema (ver [`caso_real.md`](caso_real.md)).
 - **Sí es** un patrón reproducible de cómo organizar y evaluar el enrutado de un sistema
   multi-agente, sacado de operar uno real con varias decenas de agentes.
 - **No es** una librería que instalas. Es un método con un ejemplo ejecutable: cópialo,
-  cámbiale los agentes por los tuyos y reusa el generador y el banco de pruebas.
+  cámbiale los agentes por los tuyos y reutiliza el generador y el banco de pruebas.
 - **Honestidad técnica:** la evaluación prueba la capa de enrutado *explícita* (un
   orquestador que lee un registro). Es una buena aproximación al mecanismo con el que un
   framework de agentes elige skill por su descripción, pero no es idéntico. Se mide lo que
   se puede medir de forma reproducible.
-- **Sobre los agentes de juguete:** cada agente declara en su cabecera la documentación de
+- **Sobre los agentes de demostración:** cada agente declara en su cabecera la documentación de
   apoyo que cargaría (`catalogo_productos.md`, `politica_devoluciones.md`…). Son
   referencias ilustrativas del patrón: no se incluyen como ficheros, porque lo que enseña
   este repo es el enrutado, no la lógica interna de cada agente.
@@ -107,7 +107,7 @@ el examen, no en el sistema (ver [`caso_real.md`](caso_real.md)).
 orquestacion-enjambres-ia/
 ├── README.md                 # este fichero
 ├── generar_registro.py       # genera el registro desde las definiciones de los agentes
-├── agentes/                  # los 8 agentes de juguete (uno por carpeta)
+├── agentes/                  # los 8 agentes de demostración (uno por carpeta)
 │   └── <nombre>/SKILL.md     # definición: enjambre + qué hace + triggers
 ├── Registro_Agentes.md       # SALIDA generada (no editar a mano)
 ├── eval/
@@ -142,7 +142,7 @@ This repository shows one way to solve both:
 2. A **blind evaluation** that checks each request reaches the right agent, with cases
    designed to catch the real mistakes.
 
-All with a toy example anyone understands: an online shop with eight agents.
+All with a self-contained example anyone understands: an online shop with eight agents.
 
 ### The example
 
@@ -164,7 +164,7 @@ correct answers. Some are easy; some are built to confuse. For example:
   it's the safety stop. A system like this must know when NOT to act.
 
 Result: **15 out of 15 correct**. Case-by-case detail in
-[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). It's not a made-up number: it
+[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). The figure is not an estimate: it
 comes from running the router and comparing against the answers, and it's reproducible.
 
 ### How it works inside
@@ -190,7 +190,7 @@ requests and their correct answers, in four categories: direct, **boundary** (te
 similar agents apart), safety/trap, and sequence. To evaluate, the requests go to a routing
 agent that **doesn't see the answers** (hence "blind") and are compared afterwards. The
 scoring tells four verdicts apart: pass, partial, fail, or **finding** (when the mistake is
-in how you wrote the exam, not in the system (see [`caso_real.md`](caso_real.md)).
+in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)).
 
 ### What this is and isn't
 
@@ -201,7 +201,7 @@ in how you wrote the exam, not in the system (see [`caso_real.md`](caso_real.md)
 - **Technical honesty:** the evaluation tests the *explicit* routing layer (an orchestrator
   reading a registry). It's a good approximation of how an agent framework picks a skill by
   its description, but not identical. We measure what can be measured reproducibly.
-- **About the toy agents:** each agent declares in its header the support docs it would load
+- **About the demonstration agents:** each agent declares in its header the support docs it would load
   (`catalogo_productos.md`, `politica_devoluciones.md`…). These are illustrative references,
   not shipped as files: what this repo teaches is routing, not each agent's internal logic.
 

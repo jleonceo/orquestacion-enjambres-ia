@@ -1,6 +1,6 @@
 # Resultado de ejemplo — enrutado ciego
 
-> Esto NO es un resultado inventado. Se obtuvo pasando las 15 peticiones de
+> El resultado no es una estimación: se obtuvo pasando las 15 peticiones de
 > `dataset_routing.md` a un agente enrutador que solo veía el `Registro_Agentes.md`
 > (no las respuestas correctas) y comparando después con la verdad del dataset.
 > Es reproducible: regenera el registro, pásale las peticiones a tu modelo y compara.
