@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secretos y entorno (nunca se publican)
+.env
+*.key
+*.pem
+
+# Salidas locales / temporales
+*.log
+.DS_Store
