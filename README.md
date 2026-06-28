@@ -24,7 +24,7 @@ Este repositorio enseña una forma de resolver las dos cosas:
 2. Una **evaluación a ciegas** que comprueba que cada petición llega al agente correcto,
    con casos diseñados para cazar los errores de verdad.
 
-Todo con un ejemplo de demostración que cualquiera entiende: una tienda online con ocho agentes.
+Todo sobre un ejemplo de demostración de un dominio cotidiano: una tienda online con ocho agentes.
 
 ---
 
@@ -142,7 +142,7 @@ This repository shows one way to solve both:
 2. A **blind evaluation** that checks each request reaches the right agent, with cases
    designed to catch the real mistakes.
 
-All with a self-contained example anyone understands: an online shop with eight agents.
+All on a self-contained example from an everyday domain: an online shop with eight agents.
 
 ### The example
 
