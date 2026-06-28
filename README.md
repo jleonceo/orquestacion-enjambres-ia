@@ -119,8 +119,8 @@ orquestacion-enjambres-ia/
 
 ## Repos relacionados
 
-Este repositorio forma parte de un ecosistema de piezas para construir y gobernar sistemas
-de IA con criterio. Los más cercanos a este:
+Estos repos son parte del mismo trabajo: construir sistemas con varios agentes de IA y
+comprobar que funcionan. Los más cercanos a este:
 
 - [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — la misma filosofía aplicada a los datos: código que recomprueba la coherencia sin IA.
 - [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — el método para gobernar skills: golden sets, puertas de no-regresión y verificador.
@@ -216,8 +216,8 @@ in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)
 
 ### Related repositories
 
-This repository is part of an ecosystem of building blocks for building and governing AI
-systems with rigour. The closest ones:
+These repos are part of the same body of work: building multi-agent AI systems and checking
+they actually work. The closest to this one:
 
 - [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — the same philosophy applied to data: code that re-checks coherence without AI.
 - [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — the method for governing skills: golden sets, no-regression gates, verifier.
