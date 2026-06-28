@@ -2,7 +2,7 @@
 
 Este patrón no salió de un tutorial. Salió de operar un sistema real con varias
 decenas de agentes especializados, donde el enrutado tenía que acertar de verdad.
-El ecosistema de juguete de este repo (una tienda con ocho agentes) reproduce el
+El ejemplo de demostración de este repo (una tienda con ocho agentes) reproduce el
 método; las dos lecciones de abajo son las que de verdad costaron.
 
 ## Lección 1: un agente nuevo puede quedar invisible
