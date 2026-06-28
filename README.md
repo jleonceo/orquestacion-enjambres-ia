@@ -82,7 +82,7 @@ el examen, no en el sistema; ver [`caso_real.md`](caso_real.md)).
 
 ---
 
-## Qué es esto y qué no es
+## Aclaraciones
 
 - **Sí es** un patrón reproducible de cómo organizar y evaluar el enrutado de un sistema
   multi-agente, sacado de operar uno real con varias decenas de agentes.
@@ -188,7 +188,7 @@ agent that **doesn't see the answers** (hence "blind") and are compared afterwar
 scoring tells four verdicts apart: pass, partial, fail, or **finding** (when the mistake is
 in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)).
 
-### What this is and isn't
+### Clarifications
 
 - **It is** a reproducible pattern for organising and evaluating routing in a multi-agent
   system, drawn from running a real one with several dozen agents.
