@@ -24,8 +24,6 @@ Este repositorio enseña una forma de resolver las dos cosas:
 2. Una **evaluación a ciegas** que comprueba que cada petición llega al agente correcto,
    con casos diseñados para cazar los errores de verdad.
 
-Todo sobre un caso de uso de un dominio cotidiano: una tienda online con ocho agentes.
-
 ---
 
 ## Caso de uso
@@ -141,8 +139,6 @@ This repository shows one way to solve both:
    goes stale.
 2. A **blind evaluation** that checks each request reaches the right agent, with cases
    designed to catch the real mistakes.
-
-All on a use case from an everyday domain: an online shop with eight agents.
 
 ### Use case
 
