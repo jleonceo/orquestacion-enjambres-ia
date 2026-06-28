@@ -24,13 +24,13 @@ Este repositorio enseña una forma de resolver las dos cosas:
 2. Una **evaluación a ciegas** que comprueba que cada petición llega al agente correcto,
    con casos diseñados para cazar los errores de verdad.
 
-Todo sobre un ejemplo de demostración de un dominio cotidiano: una tienda online con ocho agentes.
+Todo sobre un caso de uso de un dominio cotidiano: una tienda online con ocho agentes.
 
 ---
 
-## El ejemplo
+## Caso de uso
 
-La tienda tiene ocho agentes repartidos en tres grupos (aquí los llamamos *enjambres*):
+Una tienda online podría usar ocho agentes repartidos en tres grupos (*enjambres* de agentes/skills):
 
 - **operaciones** — registrar un pedido, consultar stock, emitir facturas.
 - **datos** — explorar ventas, predecir demanda, redactar informes.
@@ -142,11 +142,11 @@ This repository shows one way to solve both:
 2. A **blind evaluation** that checks each request reaches the right agent, with cases
    designed to catch the real mistakes.
 
-All on a self-contained example from an everyday domain: an online shop with eight agents.
+All on a use case from an everyday domain: an online shop with eight agents.
 
-### The example
+### Use case
 
-The shop has eight agents in three groups (we call them *swarms*):
+An online shop could use eight agents in three groups (*swarms* of agents/skills):
 
 - **operaciones** (operations) — register an order, check stock, issue invoices.
 - **datos** (data) — explore sales, forecast demand, write reports.
