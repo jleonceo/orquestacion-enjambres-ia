@@ -3,7 +3,7 @@
 > Cómo un sistema con muchos agentes de IA decide a cuál mandar cada petición, y
 > cómo demuestras que esa decisión no se rompe al añadir agentes nuevos.
 
-*(English version below — [jump to English](#multi-agent-ai-orchestration).)*
+*(English version below, [jump to English](#multi-agent-ai-orchestration).)*
 
 ---
 
@@ -30,9 +30,9 @@ Este repositorio enseña una forma de resolver las dos cosas:
 
 Una tienda online podría usar ocho agentes repartidos en tres grupos (*enjambres* de agentes/skills):
 
-- **operaciones** — registrar un pedido, consultar stock, emitir facturas.
-- **datos** — explorar ventas, predecir demanda, redactar informes.
-- **atención** — responder consultas, tramitar devoluciones.
+- **operaciones**, registrar un pedido, consultar stock, emitir facturas.
+- **datos**, explorar ventas, predecir demanda, redactar informes.
+- **atención**, responder consultas, tramitar devoluciones.
 
 Le pasamos 15 peticiones reales de una tienda a un agente enrutador que **solo ve el
 registro**, no las respuestas correctas. Algunas son fáciles; otras están diseñadas para
@@ -122,11 +122,12 @@ orquestacion-enjambres-ia/
 Estos repos son parte del mismo trabajo: construir sistemas con varios agentes de IA y
 verificar que se puede confiar en lo que producen. Otros repositorios que lo complementan:
 
-- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — la misma filosofía aplicada a los datos: código que recomprueba la coherencia sin IA.
-- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — el método para gobernar skills: golden sets, puertas de no-regresión y verificador.
-- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance) — que la memoria de un agente no se convierta en un vertedero.
-- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable) — evaluar una skill como se examina a un alumno (de 66% a 100%, medido).
-- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm) — un enjambre de agentes real, con su proceso y sus caídas explicadas.
+- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia), la misma filosofía aplicada a los datos: código que recomprueba la coherencia sin IA.
+- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas), el método para gobernar skills: golden sets, puertas de no-regresión y verificador.
+- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance), que la memoria de un agente no se convierta en un vertedero.
+- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable), evaluar una skill como se examina a un alumno (de 66% a 100%, medido).
+- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), un enjambre de agentes real, con su proceso y sus caídas explicadas.
+- [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), la puerta de entrada sin tecnicismos: qué es un asistente de IA, para quien empieza de cero.
 
 ---
 ---
@@ -157,9 +158,9 @@ This repository shows one way to solve both:
 
 An online shop could use eight agents in three groups (*swarms* of agents/skills):
 
-- **operaciones** (operations) — register an order, check stock, issue invoices.
-- **datos** (data) — explore sales, forecast demand, write reports.
-- **atención** (support) — answer queries, handle returns.
+- **operaciones** (operations), register an order, check stock, issue invoices.
+- **datos** (data), explore sales, forecast demand, write reports.
+- **atención** (support), answer queries, handle returns.
 
 We hand 15 real shop requests to a routing agent that **only sees the registry**, not the
 correct answers. Some are easy; some are built to confuse. For example:
@@ -219,11 +220,12 @@ in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)
 These repos are part of the same body of work: building multi-agent AI systems and verifying
 you can trust what they produce. Other repositories that complement it:
 
-- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia) — the same philosophy applied to data: code that re-checks coherence without AI.
-- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas) — the method for governing skills: golden sets, no-regression gates, verifier.
-- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance) — keeping an agent's memory from turning into a dumping ground.
-- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable) — evaluating a skill the way you'd examine a student (66% to 100%, measured).
-- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm) — a real agent swarm, with its process and its failures explained.
+- [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia), the same philosophy applied to data: code that re-checks coherence without AI.
+- [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas), the method for governing skills: golden sets, no-regression gates, verifier.
+- [agent-memory-governance](https://github.com/jleonceo/agent-memory-governance), keeping an agent's memory from turning into a dumping ground.
+- [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable), evaluating a skill the way you'd examine a student (66% to 100%, measured).
+- [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), a real agent swarm, with its process and its failures explained.
+- [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), the plain-language entry point: what an AI assistant is, for absolute beginners.
 
 ---
 
