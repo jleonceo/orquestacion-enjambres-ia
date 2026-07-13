@@ -128,6 +128,7 @@ verificar que se puede confiar en lo que producen. Otros repositorios que lo com
 - [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable), evaluar una skill como se examina a un alumno (de 66% a 100%, medido).
 - [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), un enjambre de agentes real, con su proceso y sus caídas explicadas.
 - [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), la puerta de entrada sin tecnicismos: qué es un asistente de IA, para quien empieza de cero.
+- [tesoreria-forecast-ia](https://github.com/jleonceo/tesoreria-forecast-ia): previsión de caja por descomposición con backtesting, más ratios y aging.
 
 ---
 ---
@@ -226,6 +227,7 @@ you can trust what they produce. Other repositories that complement it:
 - [llm-eval-contable](https://github.com/jleonceo/llm-eval-contable), evaluating a skill the way you'd examine a student (66% to 100%, measured).
 - [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), a real agent swarm, with its process and its failures explained.
 - [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), the plain-language entry point: what an AI assistant is, for absolute beginners.
+- [tesoreria-forecast-ia](https://github.com/jleonceo/tesoreria-forecast-ia): cash-flow forecasting by decomposition with backtesting, plus ratios and aging.
 
 ---
 
