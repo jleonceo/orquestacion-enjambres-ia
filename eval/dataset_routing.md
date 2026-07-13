@@ -4,9 +4,9 @@
 > correcto? Es la prueba de la capa de enrutado, y de si las descripciones del
 > registro discriminan lo suficiente entre agentes vecinos.
 >
-> **Método:** ejecución **ciega**. Un agente enrutador recibe SOLO las peticiones y
-> el `Registro_Agentes.md` (lo mismo que ve el orquestador real), sin las respuestas
-> correctas. Después se compara con la verdad de abajo.
+> **Método:** ejecución **ciega**. Un agente enrutador recibe las peticiones, el
+> `Registro_Agentes.md` y la lista de utilidades disponibles (lo mismo que ve el
+> orquestador real), sin las respuestas correctas. Después se compara con la verdad de abajo.
 >
 > ⚠️ ESTE FICHERO CONTIENE LAS RESPUESTAS. El enrutador ciego no debe leerlo.
 
