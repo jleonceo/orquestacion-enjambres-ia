@@ -129,6 +129,7 @@ verificar que se puede confiar en lo que producen. Otros repositorios que lo com
 - [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), un enjambre de agentes real, con su proceso y sus caídas explicadas.
 - [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), la puerta de entrada sin tecnicismos: qué es un asistente de IA, para quien empieza de cero.
 - [tesoreria-forecast-ia](https://github.com/jleonceo/tesoreria-forecast-ia): previsión de caja por descomposición con backtesting, más ratios y aging.
+- [control-interno-fraude-ia](https://github.com/jleonceo/control-interno-fraude-ia): detección de fraude contable con aritmética, dentro de un marco de control interno.
 
 ---
 ---
@@ -228,6 +229,7 @@ you can trust what they produce. Other repositories that complement it:
 - [accounting-agent-swarm](https://github.com/jleonceo/accounting-agent-swarm), a real agent swarm, with its process and its failures explained.
 - [tu-primer-asistente-ia-web](https://github.com/jleonceo/tu-primer-asistente-ia-web), the plain-language entry point: what an AI assistant is, for absolute beginners.
 - [tesoreria-forecast-ia](https://github.com/jleonceo/tesoreria-forecast-ia): cash-flow forecasting by decomposition with backtesting, plus ratios and aging.
+- [control-interno-fraude-ia](https://github.com/jleonceo/control-interno-fraude-ia): accounting fraud detection with arithmetic, inside an internal-control framework.
 
 ---
 
