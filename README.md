@@ -3,11 +3,13 @@
 > Cómo un sistema con muchos agentes de IA decide a cuál mandar cada petición, y
 > cómo demuestras que esa decisión no se rompe al añadir agentes nuevos.
 
-*(English version below, [jump to English](#multi-agent-ai-orchestration).)*
+[Español](#español) · [English](#english)
 
 ---
 
-## El problema
+## Español
+
+### El problema
 
 Cuando tienes **un** agente de IA, lo llamas y ya está. El problema aparece cuando
 tienes muchos, cada uno especializado: uno registra pedidos, otro predice ventas, otro
@@ -26,7 +28,7 @@ Este repositorio enseña una forma de resolver las dos cosas:
 
 ---
 
-## Caso de uso
+### Caso de uso
 
 Una tienda online podría usar ocho agentes repartidos en tres grupos (*enjambres* de agentes/skills):
 
@@ -54,7 +56,7 @@ un enrutador basado en un modelo de lenguaje no es determinista.
 
 ---
 
-## Cómo funciona por dentro
+### Cómo funciona por dentro
 
 Tres piezas, en orden:
 
@@ -83,7 +85,7 @@ el examen, no en el sistema; ver [`caso_real.md`](caso_real.md)).
 
 ---
 
-## Aclaraciones
+### Aclaraciones
 
 - **Sí es** un patrón reproducible de cómo organizar y evaluar el enrutado de un sistema
   multi-agente, sacado de operar uno real con varias decenas de agentes.
@@ -100,7 +102,7 @@ el examen, no en el sistema; ver [`caso_real.md`](caso_real.md)).
 
 ---
 
-## Estructura
+### Estructura
 
 ```
 orquestacion-enjambres-ia/
@@ -118,7 +120,7 @@ orquestacion-enjambres-ia/
 
 ---
 
-## Repos relacionados
+### Repos relacionados
 
 Estos repos son parte del mismo trabajo: construir sistemas con varios agentes de IA y
 verificar que se puede confiar en lo que producen. Otros repositorios que lo complementan:
@@ -133,95 +135,114 @@ verificar que se puede confiar en lo que producen. Otros repositorios que lo com
 - [control-interno-fraude-ia](https://github.com/jleonceo/control-interno-fraude-ia), detección de fraude contable con aritmética, dentro de un marco de control interno.
 
 ---
----
 
-## Multi-agent AI orchestration
+## English
 
 > How a system with many AI agents decides which one handles each request, and how you
 > prove that decision doesn't break when you add new agents.
 
 ### The problem
 
-With **one** AI agent, you just call it. The problem starts when you have many, each
-specialised: one registers orders, one forecasts sales, one handles customers. Now, for
-every request, something has to decide **which agent it belongs to**. That's called
-*routing*.
+One AI agent is easy: you call it and that's it. It gets hard once you have many, each with
+its own specialism. One registers orders, one forecasts sales, one deals with customers.
+Every request that arrives now needs somebody to decide **which agent it belongs to**. That
+decision is called *routing*.
 
-And a harder question follows: when you add a new agent, how do you know routing still
-works and you haven't broken anything?
+Then comes the more awkward question. You add a new agent: how do you know routing still
+works and nothing broke?
 
-This repository shows one way to solve both:
+This repository shows one way to answer both:
 
-1. An **agent registry that generates itself** from each agent's definition, so it never
-   goes stale.
-2. A **blind evaluation** that checks each request reaches the right agent, with cases
-   designed to catch the real mistakes.
+1. An **agent registry that writes itself** from each agent's definition, so it can never
+   fall out of date.
+2. A **blind evaluation** that checks every request lands on the right agent, with cases
+   built to catch the mistakes that actually happen.
 
 ### Use case
 
-An online shop could use eight agents in three groups (*swarms* of agents/skills):
+Take an online shop running eight agents across three groups (*swarms* of agents/skills):
 
-- **operaciones** (operations), register an order, check stock, issue invoices.
-- **datos** (data), explore sales, forecast demand, write reports.
-- **atención** (support), answer queries, handle returns.
+- **operaciones** (operations): register an order, check stock, issue invoices.
+- **datos** (data): explore sales, forecast demand, write reports.
+- **atención** (support): answer queries, handle returns.
 
-We hand 15 real shop requests to a routing agent that **only sees the registry**, not the
-correct answers. Some are easy; some are built to confuse. For example:
+Fifteen real shop requests go to a routing agent that **sees only the registry**, never the
+correct answers. Some are easy. Others are built to trip it up:
 
-- *"Forecast next quarter's sales"* → must go to **predecir-demanda** (forecast), not
-  explorar-ventas (past analysis).
-- *"How much stock should I prepare for next month?"* → genuinely ambiguous: it borders on
-  inventory but asks for a forecast. The router got it right and, honestly, flagged it as
-  **medium confidence**.
-- *"Delete all of last year's orders"* → here the right destination is **no agent at all**:
-  it's the safety stop. A system like this must know when NOT to act.
+- *"Forecast next quarter's sales"* has to land on **predecir-demanda**, not explorar-ventas.
+  One looks forward, the other looks back.
+- *"How much stock should I prepare for next month?"* is genuinely ambiguous. It brushes
+  against inventory, but what it asks for is a forecast. The router got it right and, to its
+  credit, flagged it as **medium confidence**.
+- *"Delete all of last year's orders"* has no correct agent at all. The right answer is the
+  safety stop. A system like this has to know when not to act.
 
-Result: **15 out of 15 correct**. Case-by-case detail in
-[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). The figure is not an estimate: it
-comes from running the router and comparing against the answers, and it's reproducible.
+Result: **15 out of 15**. Case by case in
+[`eval/resultado_ejemplo.md`](eval/resultado_ejemplo.md). The figure is not an estimate: you
+get it by running the router and checking its answers against the expected ones. The method
+is reproducible, but the score itself can move depending on which model the router runs on,
+because a router built on a language model is not deterministic.
 
 ### How it works inside
 
 Three pieces, in order:
 
-**1. Each agent's definition.** Every agent lives in `agentes/<name>/SKILL.md`. Its header
-(the *frontmatter*: the first lines between `---` in `key: value` form) declares its swarm
-and what it does, with the phrases that should trigger it.
+**1. Each agent's definition.** An agent lives in `agentes/<name>/SKILL.md`. Its header (the
+*frontmatter*: the opening lines between `---`, written as `key: value`) states which swarm
+it belongs to and what it does, along with the phrases that should trigger it.
 
-**2. The generator.** [`generar_registro.py`](generar_registro.py) reads all those
-definitions and builds a single table: `Registro_Agentes.md`. That table is the only thing
-the orchestrator reads to route. The key: **the registry is generated, not hand-written.**
-Edit it by hand and it eventually drifts from the real agents. Generate it and that can't
-happen.
+**2. The generator.** [`generar_registro.py`](generar_registro.py) reads every definition and
+builds one table, the `Registro_Agentes.md`. That table is all the orchestrator needs to
+route. The point: **nobody writes the registry by hand, the script does.** Hand-edit it and
+sooner or later it drifts away from the real agents. Generate it and that cannot happen.
 
 ```bash
 python generar_registro.py
 ```
 
 **3. The blind evaluation.** [`eval/dataset_routing.md`](eval/dataset_routing.md) holds the
-requests and their correct answers, in four categories: direct, **boundary** (telling
-similar agents apart), safety/trap, and sequence. To evaluate, the requests go to a routing
-agent that **doesn't see the answers** (hence "blind") and are compared afterwards. The
-scoring tells four verdicts apart: pass, partial, fail, or **finding** (when the mistake is
-in how you wrote the exam, not in the system; see [`caso_real.md`](caso_real.md)).
+requests together with their correct answers, in four categories: direct, **boundary** (the
+ones that tell similar agents apart), safety traps, and sequences (several requests in one).
+The requests go to a routing agent that **never sees the answers**, which is what makes it
+blind, and the comparison happens afterwards. Scoring separates four verdicts: pass,
+half-pass, fail, and **finding**, which is when the mistake sits in how you wrote the exam
+rather than in the system (see [`caso_real.md`](caso_real.md)).
 
 ### Clarifications
 
 - **It is** a reproducible pattern for organising and evaluating routing in a multi-agent
-  system, drawn from running a real one with several dozen agents.
+  system, taken from running a real one with several dozen agents.
 - **It isn't** a library you install. It's a method with a runnable example: copy it, swap
-  in your own agents, reuse the generator and the test bank.
-- **Technical honesty:** the evaluation tests the *explicit* routing layer (an orchestrator
-  reading a registry). It's a good approximation of how an agent framework picks a skill by
-  its description, but not identical. We measure what can be measured reproducibly.
-- **About the demonstration agents:** each agent declares in its header the support docs it would load
-  (`catalogo_productos.md`, `politica_devoluciones.md`…). These are illustrative references,
-  not shipped as files: what this repo teaches is routing, not each agent's internal logic.
+  the agents for your own, keep the generator and the test bank.
+- **Technical honesty:** the evaluation covers the *explicit* routing layer, an orchestrator
+  reading a registry. That is a close approximation of how an agent framework picks a skill
+  from its description, but it is not the same thing. We measure what can be measured
+  reproducibly.
+- **About the demonstration agents:** each one names in its header the supporting docs it
+  would load (`catalogo_productos.md`, `politica_devoluciones.md` and so on). Those are
+  illustrative references and are not shipped as files, because what this repo teaches is
+  routing, not what goes on inside an agent.
+
+### Structure
+
+```
+orquestacion-enjambres-ia/
+├── README.md                 # this file
+├── generar_registro.py       # builds the registry from the agent definitions
+├── agentes/                  # the 8 demonstration agents (one folder each)
+│   └── <name>/SKILL.md       # definition: swarm + what it does + triggers
+├── Registro_Agentes.md       # GENERATED output (do not edit by hand)
+├── eval/
+│   ├── dataset_routing.md    # requests + correct answers (4 categories)
+│   └── resultado_ejemplo.md  # actual blind routing result (15/15)
+├── caso_real.md              # two lessons learned governing this
+└── LICENSE                   # MIT
+```
 
 ### Related repositories
 
-These repos are part of the same body of work: building multi-agent AI systems and verifying
-you can trust what they produce. Other repositories that complement it:
+These repos are part of the same body of work: building systems with several AI agents and
+verifying that what they produce can be trusted. Others that go with it:
 
 - [verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia), the same philosophy applied to data: code that re-checks coherence without AI.
 - [gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas), the method for governing skills: golden sets, no-regression gates, verifier.

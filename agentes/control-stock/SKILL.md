@@ -14,4 +14,4 @@ Consulta el inventario actual y señala productos por debajo del mínimo.
 
 ## DOCUMENTACION QUE CARGA
 
-- `catalogo_productos.md` — productos y umbrales mínimos de stock.
+- `catalogo_productos.md`: productos y umbrales mínimos de stock.

@@ -14,4 +14,4 @@ Convierte resultados de análisis en un informe claro para una audiencia no téc
 
 ## DOCUMENTACION QUE CARGA
 
-- `plantilla_informe.md` — estructura del informe ejecutivo y tono.
+- `plantilla_informe.md`: estructura del informe ejecutivo y tono.

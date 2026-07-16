@@ -1,4 +1,4 @@
-# Resultado de ejemplo — enrutado ciego
+# Resultado de ejemplo: enrutado ciego
 
 > El resultado no es una estimación: se obtuvo pasando las 15 peticiones de
 > `dataset_routing.md` a un agente enrutador que solo veía el `Registro_Agentes.md`

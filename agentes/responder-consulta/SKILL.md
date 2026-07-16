@@ -15,4 +15,4 @@ Atiende consultas de cliente sobre producto y estado de pedido.
 
 ## DOCUMENTACION QUE CARGA
 
-- `faq_clientes.md` — respuestas frecuentes y política de envíos.
+- `faq_clientes.md`: respuestas frecuentes y política de envíos.
