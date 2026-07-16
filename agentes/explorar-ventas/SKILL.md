@@ -14,4 +14,4 @@ Análisis exploratorio de un histórico de ventas: distribución, estacionalidad
 
 ## DOCUMENTACION QUE CARGA
 
-- `metodo_eda.md` — pasos de un análisis exploratorio y comprobaciones de calidad del dato.
+- `metodo_eda.md`: pasos de un análisis exploratorio y comprobaciones de calidad del dato.

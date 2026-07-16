@@ -14,7 +14,7 @@ Genera la factura de un pedido existente, con impuestos y total.
 
 ## DOCUMENTACION QUE CARGA
 
-- `reglas_facturacion.md` — tipos de impuesto y formato de numeración.
+- `reglas_facturacion.md`: tipos de impuesto y formato de numeración.
 
 ## RESULTADO
 

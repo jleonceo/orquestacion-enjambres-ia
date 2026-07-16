@@ -14,7 +14,7 @@ Tramita una devolución: comprueba elegibilidad, aplica política y registra el 
 
 ## DOCUMENTACION QUE CARGA
 
-- `politica_devoluciones.md` — plazos, condiciones y método de reembolso.
+- `politica_devoluciones.md`: plazos, condiciones y método de reembolso.
 
 ## RESULTADO
 

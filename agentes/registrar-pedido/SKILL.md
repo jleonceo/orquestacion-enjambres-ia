@@ -15,7 +15,7 @@ Da de alta un pedido y sus líneas. Calcula el total a partir de cantidad × pre
 
 ## DOCUMENTACION QUE CARGA
 
-- `catalogo_productos.md` — referencia de productos, precios y unidades válidas.
+- `catalogo_productos.md`: referencia de productos, precios y unidades válidas.
 
 ## RESULTADO
 

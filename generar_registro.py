@@ -99,7 +99,7 @@ def main():
         por_enj.setdefault(enj, []).append((nombre, desc, docs, contrato))
 
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
-    L = ["# Registro de Agentes (GENERADO — no editar a mano)", ""]
+    L = ["# Registro de Agentes (GENERADO: no editar a mano)", ""]
     L.append(f"> Autogenerado por `generar_registro.py` el **{ts}** desde `agentes/*/SKILL.md`.")
     L.append(f"> Índice que lee el orquestador para enrutar. {len(files)} agentes.")
     L.append("")
@@ -112,8 +112,8 @@ def main():
         L.append("| Agente | Qué hace (triggers) | Documentación que carga | Contrato |")
         L.append("|---|---|---|---|")
         for nombre, desc, docs, contrato in items:
-            doc_cell = ", ".join(f"`{d}`" for d in docs) if docs else "—"
-            L.append(f"| `{nombre}` | {desc or '—'} | {doc_cell} | {'sí' if contrato else '—'} |")
+            doc_cell = ", ".join(f"`{d}`" for d in docs) if docs else "(ninguna)"
+            L.append(f"| `{nombre}` | {desc or '(sin descripción)'} | {doc_cell} | {'sí' if contrato else 'no'} |")
         L.append("")
 
     with open(OUT, "w", encoding="utf-8") as f:

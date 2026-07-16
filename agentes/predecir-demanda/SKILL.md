@@ -14,4 +14,4 @@ Modelo de previsión de demanda sobre el histórico de ventas.
 
 ## DOCUMENTACION QUE CARGA
 
-- `metodo_forecast.md` — elección de modelo, validación y horizonte de predicción.
+- `metodo_forecast.md`: elección de modelo, validación y horizonte de predicción.
