@@ -1,6 +1,6 @@
 # Registro de Agentes (GENERADO: no editar a mano)
 
-> Autogenerado por `generar_registro.py` el **2026-07-16 20:23** desde `agentes/*/SKILL.md`.
+> Autogenerado por `generar_registro.py` el **2026-07-20 12:45** desde `agentes/*/SKILL.md`.
 > Índice que lee el orquestador para enrutar. 8 agentes.
 
 ## operaciones  (3)
