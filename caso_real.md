@@ -1,9 +1,9 @@
 # El caso real: dos cosas que aprendí gobernando el enrutado
 
 Este patrón no salió de un tutorial. Salió de operar un sistema real con varias
-decenas de agentes especializados, donde el enrutado tenía que acertar de verdad.
-El ejemplo de demostración de este repo (una tienda con ocho agentes) reproduce el
-método; las dos lecciones de abajo son las que de verdad costaron.
+decenas de agentes especializados, donde el enrutado tenía que acertar. El ejemplo
+de demostración de este repo (una tienda con ocho agentes) reproduce el método; las
+dos lecciones de abajo son las que de verdad costaron.
 
 ## Lección 1: un agente nuevo puede quedar invisible
 
@@ -14,10 +14,10 @@ El motivo: el orquestador no lee a los agentes, lee el **registro**. Y yo había
 el agente sin regenerar el registro. Para el enrutado, ese agente no existía.
 
 De ahí la decisión de diseño que ves en este repo: **el registro no se edita a mano, se
-genera** (`generar_registro.py`). Y regenerarlo es un paso obligatorio al dar de alta un
-agente, no una buena costumbre opcional. Si no, vuelve el agente invisible.
+genera** (`generar_registro.py`). Regenerarlo tampoco es una buena costumbre opcional:
+es un paso obligatorio al dar de alta un agente. Si no, vuelve el agente invisible.
 
-## Lección 2: cuando el enrutador "falla", duda primero del examen
+## Lección 2: duda del examen antes que del enrutador
 
 En una de las rondas, dos agentes parecían pisarse: el enrutador mandaba a uno
 peticiones que yo creía del otro. Mi primera reacción fue "el registro no discrimina
@@ -35,6 +35,6 @@ método de este repo separa dos veredictos distintos: **FALLA** (el sistema se e
 
 ## Por qué importan las dos juntas
 
-Las dos apuntan a lo mismo: en un sistema multi-agente, el enrutado no se valida mirándolo
+Las dos apuntan a lo mismo. En un sistema multi-agente, el enrutado no se valida mirándolo
 una vez y dándolo por bueno. Se valida con un registro que no se desincroniza y con una
 evaluación que se cuestiona a sí misma. Eso es lo que este repo intenta enseñar.
