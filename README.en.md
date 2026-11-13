@@ -49,6 +49,20 @@ because a router built on a language model is not deterministic.
 
 ## How it works inside
 
+```mermaid
+flowchart TD
+    S[Each agent's definition<br/>swarm, what it does and trigger phrases] --> GN[generar_registro.py]
+    GN --> RG[Registro_Agentes.md<br/>generated, never written by hand]
+    P[Request] --> O{Orchestrator<br/>reads only the registry}
+    RG --> O
+    O --> A[Right agent]
+    E[Test set with correct answers] -.-> C[Blind evaluation<br/>15 of 15]
+    O -.-> C
+    style O fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style A fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+```
+
+
 Three pieces, in order:
 
 **1. Each agent's definition.** An agent lives in `agentes/<name>/SKILL.md`. Its header (the
