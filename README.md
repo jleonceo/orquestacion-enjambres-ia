@@ -55,13 +55,13 @@ un enrutador basado en un modelo de lenguaje no es determinista.
 ## Cómo funciona por dentro
 
 ```mermaid
-flowchart TD
-    S[Definición de cada agente<br/>enjambre, qué hace y frases que lo activan] --> GN[generar_registro.py]
-    GN --> RG[Registro_Agentes.md<br/>se genera, nunca se escribe a mano]
+flowchart LR
+    S[Definición de cada agente<br/>enjambre, qué hace y<br/>frases que lo activan] --> GN[generar_registro.py]
+    GN --> RG[Registro_Agentes.md<br/>se genera, nunca se<br/>escribe a mano]
     P[Petición] --> O{Orquestador<br/>solo lee el registro}
     RG --> O
     O --> A[Agente adecuado]
-    E[Examen con respuestas correctas] -.-> C[Evaluación a ciegas<br/>15 de 15]
+    E[Examen con<br/>respuestas correctas] -.-> C[Evaluación a ciegas<br/>15 de 15]
     O -.-> C
     style O fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
     style A fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
